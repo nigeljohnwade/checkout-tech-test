@@ -1,15 +1,23 @@
 import { checkout } from './checkout.js';
 
 const summary = checkout([
-    {type: 'standard', price: 790, isThursday: true},
-    {type: 'standard', price: 790, isThursday: true},
-    {type: 'concession', price: 540, isThursday: true},
-    {type: 'concession', price: 540, isThursday: true},
-    {type: 'concession', price: 540, isThursday: true},
-    {type: 'real3D', price: 90},
-    {type: 'real3D', price: 90},
-    {type: 'IMAX', price: 150},
-    {type: 'IMAX', price: 150},
+    {product: 'ticket', type: 'standard', price: 790, isThursday: true},
+    {product: 'ticket', type: 'standard', price: 790, isThursday: true},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: true},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: true},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: true},
+    {product: 'extra', type: 'real3D', price: 90},
+    {product: 'extra', type: 'real3D', price: 90},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
 ]);
 
 console.log(summary);

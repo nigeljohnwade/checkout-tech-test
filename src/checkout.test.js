@@ -37,6 +37,22 @@ const sampleBasket3 = [
     {product: 'extra', type: 'IMAX', price: 150},
 ];
 
+const sampleBasket4 = [
+    {product: 'ticket', type: 'standard', price: 790, isThursday: false},
+    {product: 'ticket', type: 'standard', price: 790, isThursday: true},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: false},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: true},
+    {product: 'ticket', type: 'concession', price: 540, isThursday: false},
+    {product: 'extra', type: 'real3D', price: 90},
+    {product: 'extra', type: 'real3D', price: 90},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+    {product: 'extra', type: 'IMAX', price: 150},
+];
+
 test('Sample basket 1', () => {
     expect(checkout(sampleBasket1)).toMatchObject({
         totalPrice: 2350,
@@ -89,4 +105,8 @@ test('Sample basket 3', () => {
         savings: 540,
         isThursdayOfferCount: 0,
     });
+});
+
+test('Sample basket 4', () => {
+    expect(checkout(sampleBasket4)).toMatchObject(new Error('basket invalid'));
 });
